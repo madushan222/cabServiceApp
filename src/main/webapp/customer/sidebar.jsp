@@ -13,6 +13,10 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 <!DOCTYPE html>
 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
