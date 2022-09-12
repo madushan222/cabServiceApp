@@ -4,6 +4,14 @@
 
 <xs:element name="addAdminResponse" type="tns:addAdminResponse"/>
 
+<xs:element name="deleteAdmin" type="tns:deleteAdmin"/>
+
+<xs:element name="deleteAdminResponse" type="tns:deleteAdminResponse"/>
+
+<xs:element name="getAdmin" type="tns:getAdmin"/>
+
+<xs:element name="getAdminResponse" type="tns:getAdminResponse"/>
+
 <xs:element name="getAdmins" type="tns:getAdmins"/>
 
 <xs:element name="getAdminsResponse" type="tns:getAdminsResponse"/>
@@ -11,6 +19,10 @@
 <xs:element name="hello" type="tns:hello"/>
 
 <xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="updateAdmin" type="tns:updateAdmin"/>
+
+<xs:element name="updateAdminResponse" type="tns:updateAdminResponse"/>
 
 <xs:complexType name="addAdmin">
 <xs:sequence>
@@ -27,12 +39,37 @@
 <xs:element name="mobile" type="xs:int"/>
 <xs:element name="nic" type="xs:string" minOccurs="0"/>
 <xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="userId" type="xs:int"/>
 <xs:element name="username" type="xs:string" minOccurs="0"/>
 <xs:element name="fName" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
 <xs:complexType name="addAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateAdmin">
+<xs:sequence>
+<xs:element name="admin" type="tns:admin" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteAdmin">
+<xs:sequence>
+<xs:element name="userId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteAdminResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:boolean"/>
 </xs:sequence>
@@ -57,6 +94,18 @@
 <xs:complexType name="helloResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAdmin">
+<xs:sequence>
+<xs:element name="userId" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:admin" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 </xs:schema>

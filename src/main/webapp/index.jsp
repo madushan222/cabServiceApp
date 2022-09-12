@@ -4,6 +4,8 @@
     Author     : shanr
 --%>
 
+<%@page import="icbt.LoginService"%>
+<%@page import="icbt.LoginService_Service"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -165,7 +167,7 @@ transform: rotate(45deg);
         <div class="login">
             <div class="account-login">
                <h1>GoCheeta</h1>
-               <form action="" class="login-form">
+               <form action="login.jsp" class="login-form" method="POST">
                   <div class="form-group">
                       <input type="text" id="username" name="username" placeholder="User Name" class="form-control">
                   </div>
