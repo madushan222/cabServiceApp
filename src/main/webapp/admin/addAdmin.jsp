@@ -21,11 +21,6 @@ if(session.getAttribute("userType") == null || session.getAttribute("userType").
 <!--        <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css"-->
 />
         <title>Add Admin</title>
-        <script>
-            $( function() {
-              $( "#datepicker" ).datepicker();
-            } );
-        </script>
     </head>
     <body>
         <jsp:include page="adminSidebar.jsp" />
@@ -134,7 +129,7 @@ if(session.getAttribute("userType") == null || session.getAttribute("userType").
                             <td><%out.println(adm.getMobile());%></td>
                             <td><%out.println(adm.getBranchId());%></td>
                             <td><%%><a href="editAdmin.jsp?userId=<%out.println(adm.getUserId());%>" title="Edit"><i class="fa fa-pencil"></i></a></td>
-                            <td><a href="deleteAdmin.jsp?userId=<%out.println(adm.getUserId());%>" title="Delete"><i class="fa fa-trash" style="color:red;"></i></a></td>
+                            <td><a href="../common/deleteUser.jsp?userType=ADMIN&userId=<%out.println(adm.getUserId());%>" title="Delete"><i class="fa fa-trash" style="color:red;"></i></a></td>
                             </tbody>
                         </tr>
                         <%}

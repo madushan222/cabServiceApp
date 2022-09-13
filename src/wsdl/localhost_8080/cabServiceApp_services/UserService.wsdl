@@ -4,17 +4,17 @@
 <xsd:import namespace="http://icbt/" schemaLocation="http://localhost:8080/cabServiceApp_services/UserService?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="updateAdmin">
-<part name="parameters" element="tns:updateAdmin"/>
+<message name="addCustomer">
+<part name="parameters" element="tns:addCustomer"/>
 </message>
-<message name="updateAdminResponse">
-<part name="parameters" element="tns:updateAdminResponse"/>
+<message name="addCustomerResponse">
+<part name="parameters" element="tns:addCustomerResponse"/>
 </message>
-<message name="addAdmin">
-<part name="parameters" element="tns:addAdmin"/>
+<message name="deleteUser">
+<part name="parameters" element="tns:deleteUser"/>
 </message>
-<message name="addAdminResponse">
-<part name="parameters" element="tns:addAdminResponse"/>
+<message name="deleteUserResponse">
+<part name="parameters" element="tns:deleteUserResponse"/>
 </message>
 <message name="getAdmin">
 <part name="parameters" element="tns:getAdmin"/>
@@ -28,26 +28,50 @@
 <message name="getAdminsResponse">
 <part name="parameters" element="tns:getAdminsResponse"/>
 </message>
+<message name="updateAdmin">
+<part name="parameters" element="tns:updateAdmin"/>
+</message>
+<message name="updateAdminResponse">
+<part name="parameters" element="tns:updateAdminResponse"/>
+</message>
+<message name="getCustomer">
+<part name="parameters" element="tns:getCustomer"/>
+</message>
+<message name="getCustomerResponse">
+<part name="parameters" element="tns:getCustomerResponse"/>
+</message>
 <message name="hello">
 <part name="parameters" element="tns:hello"/>
 </message>
 <message name="helloResponse">
 <part name="parameters" element="tns:helloResponse"/>
 </message>
-<message name="deleteAdmin">
-<part name="parameters" element="tns:deleteAdmin"/>
+<message name="addAdmin">
+<part name="parameters" element="tns:addAdmin"/>
 </message>
-<message name="deleteAdminResponse">
-<part name="parameters" element="tns:deleteAdminResponse"/>
+<message name="addAdminResponse">
+<part name="parameters" element="tns:addAdminResponse"/>
+</message>
+<message name="getCustomers">
+<part name="parameters" element="tns:getCustomers"/>
+</message>
+<message name="getCustomersResponse">
+<part name="parameters" element="tns:getCustomersResponse"/>
+</message>
+<message name="updateCustomer">
+<part name="parameters" element="tns:updateCustomer"/>
+</message>
+<message name="updateCustomerResponse">
+<part name="parameters" element="tns:updateCustomerResponse"/>
 </message>
 <portType name="UserService">
-<operation name="updateAdmin">
-<input wsam:Action="http://icbt/UserService/updateAdminRequest" message="tns:updateAdmin"/>
-<output wsam:Action="http://icbt/UserService/updateAdminResponse" message="tns:updateAdminResponse"/>
+<operation name="addCustomer">
+<input wsam:Action="http://icbt/UserService/addCustomerRequest" message="tns:addCustomer"/>
+<output wsam:Action="http://icbt/UserService/addCustomerResponse" message="tns:addCustomerResponse"/>
 </operation>
-<operation name="addAdmin">
-<input wsam:Action="http://icbt/UserService/addAdminRequest" message="tns:addAdmin"/>
-<output wsam:Action="http://icbt/UserService/addAdminResponse" message="tns:addAdminResponse"/>
+<operation name="deleteUser">
+<input wsam:Action="http://icbt/UserService/deleteUserRequest" message="tns:deleteUser"/>
+<output wsam:Action="http://icbt/UserService/deleteUserResponse" message="tns:deleteUserResponse"/>
 </operation>
 <operation name="getAdmin">
 <input wsam:Action="http://icbt/UserService/getAdminRequest" message="tns:getAdmin"/>
@@ -57,18 +81,34 @@
 <input wsam:Action="http://icbt/UserService/getAdminsRequest" message="tns:getAdmins"/>
 <output wsam:Action="http://icbt/UserService/getAdminsResponse" message="tns:getAdminsResponse"/>
 </operation>
+<operation name="updateAdmin">
+<input wsam:Action="http://icbt/UserService/updateAdminRequest" message="tns:updateAdmin"/>
+<output wsam:Action="http://icbt/UserService/updateAdminResponse" message="tns:updateAdminResponse"/>
+</operation>
+<operation name="getCustomer">
+<input wsam:Action="http://icbt/UserService/getCustomerRequest" message="tns:getCustomer"/>
+<output wsam:Action="http://icbt/UserService/getCustomerResponse" message="tns:getCustomerResponse"/>
+</operation>
 <operation name="hello">
 <input wsam:Action="http://icbt/UserService/helloRequest" message="tns:hello"/>
 <output wsam:Action="http://icbt/UserService/helloResponse" message="tns:helloResponse"/>
 </operation>
-<operation name="deleteAdmin">
-<input wsam:Action="http://icbt/UserService/deleteAdminRequest" message="tns:deleteAdmin"/>
-<output wsam:Action="http://icbt/UserService/deleteAdminResponse" message="tns:deleteAdminResponse"/>
+<operation name="addAdmin">
+<input wsam:Action="http://icbt/UserService/addAdminRequest" message="tns:addAdmin"/>
+<output wsam:Action="http://icbt/UserService/addAdminResponse" message="tns:addAdminResponse"/>
+</operation>
+<operation name="getCustomers">
+<input wsam:Action="http://icbt/UserService/getCustomersRequest" message="tns:getCustomers"/>
+<output wsam:Action="http://icbt/UserService/getCustomersResponse" message="tns:getCustomersResponse"/>
+</operation>
+<operation name="updateCustomer">
+<input wsam:Action="http://icbt/UserService/updateCustomerRequest" message="tns:updateCustomer"/>
+<output wsam:Action="http://icbt/UserService/updateCustomerResponse" message="tns:updateCustomerResponse"/>
 </operation>
 </portType>
 <binding name="UserServicePortBinding" type="tns:UserService">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="updateAdmin">
+<operation name="addCustomer">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -77,7 +117,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="addAdmin">
+<operation name="deleteUser">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -104,6 +144,24 @@
 <soap:body use="literal"/>
 </output>
 </operation>
+<operation name="updateAdmin">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="getCustomer">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
 <operation name="hello">
 <soap:operation soapAction=""/>
 <input>
@@ -113,7 +171,25 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="deleteAdmin">
+<operation name="addAdmin">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="getCustomers">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="updateCustomer">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

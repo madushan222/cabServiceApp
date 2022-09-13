@@ -15,6 +15,11 @@
             session.setAttribute("userType",new_login.getUserType());
             response.sendRedirect("admin/adminSidebar.jsp");
         }
+        else if(new_login.getUserType().equals("CUSTOMER"))
+        {   
+            session.setAttribute("userType",new_login.getUserType());
+            response.sendRedirect("customer/sidebar.jsp");
+        }
             
     }
     else

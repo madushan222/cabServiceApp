@@ -42,30 +42,42 @@ Ut imperdiet pretium est in molestie. In tempor erat non ullamcorper porttitor. 
 Ut commodo sapien quis dui pulvinar, non porta orci congue. Morbi elementum, erat ut ornare pretium, lacus ex laoreet libero, sit amet auctor enim turpis quis libero. Curabitur et nulla tempor, hendrerit quam quis, pretium tellus. Vivamus venenatis quam id diam iaculis mattis. Proin vel purus orci. Sed erat purus, condimentum eu facilisis quis, fringilla sit amet felis. Aliquam molestie ac sapien consequat imperdiet. Etiam risus ipsum, pretium nec pharetra quis, mattis a risus. Ut tincidunt mollis pellentesque. Aenean bibendum lacinia ultricies. Phasellus convallis lectus id ultricies consequat. Vivamus finibus massa magna, eu molestie metus rhoncus vitae. Aliquam ut est risus. Praesent laoreet rutrum fringilla.</p>
             </div>
              <div class="col-md-4">    
-                <form action="/action_page.php">
+                <form action="customerReg.jsp" method="POST">
                     <div class="form-group">
-                      <label for="email">First Name:</label>
-                      <input type="email" class="form-control" id="email" autocomplete="off" required>
+                      <label for="fName">First Name:</label>
+                      <input type="text" class="form-control" id="fName" name="fName" autocomplete="off" required>
                     </div>
                     <div class="form-group">
-                      <label for="email">Last Name:</label>
-                      <input type="email" class="form-control" id="email" autocomplete="off" required>
+                      <label for="lName">Last Name:</label>
+                      <input type="text" class="form-control" id="lName" name="lName" autocomplete="off" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="nic">NIC:</label>
+                      <input type="text" class="form-control" id="nic" name="nic" autocomplete="off" required>
                     </div>
                      <div class="form-group">
-                      <label for="email">Address Line 1:</label>
-                      <input type="email" class="form-control" id="email" autocomplete="off" required>
+                      <label for="address1">Address Line 1:</label>
+                      <input type="text" class="form-control" id="address1" name="address1" autocomplete="off" required>
                     </div>
                      <div class="form-group">
-                      <label for="email">Address Line 2:</label>
-                      <input type="email" class="form-control" id="email" autocomplete="off">
+                      <label for="address2">Address Line 2:</label>
+                      <input type="text" class="form-control" id="address2" name="address2" autocomplete="off">
                     </div>
                     <div class="form-group">
-                      <label for="email">Mobile:</label>
-                      <input type="email" class="form-control" id="email" autocomplete="off" required>
+                      <label for="mobile">Mobile:</label>
+                      <input type="number" class="form-control" id="mobile" name="mobile" autocomplete="off" required>
                     </div>
                     <div class="form-group">
                       <label for="email">Email address:</label>
-                      <input type="email" class="form-control" id="email" autocomplete="off" required> 
+                      <input type="email" class="form-control" id="email" name="email" autocomplete="off" required> 
+                    </div>
+                    <div class="form-group">
+                      <label for="username">Username:</label>
+                      <input type="text" class="form-control" id="username" name="username" autocomplete="off" required> 
+                    </div>
+                     <div class="form-group">
+                      <label for="password">Password:</label>
+                      <input type="password" class="form-control" id="password" name="password" autocomplete="off" required> 
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                     <button type="reset" class="btn btn-warning">Clear</button>

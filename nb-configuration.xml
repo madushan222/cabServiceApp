@@ -18,5 +18,6 @@ Any value defined here will override the pom.xml file value but is only applicab
         <netbeans.hint.jdkPlatform>Zulu_8.0.345_1</netbeans.hint.jdkPlatform>
         <org-netbeans-modules-maven-jaxws._5f_C_5f_UserService>http://localhost:8080/cabServiceApp_services/UserService?wsdl</org-netbeans-modules-maven-jaxws._5f_C_5f_UserService>
         <org-netbeans-modules-maven-jaxws._5f_C_5f_loginService>http://localhost:8080/cabServiceApp_services/loginService?wsdl</org-netbeans-modules-maven-jaxws._5f_C_5f_loginService>
+        <org-netbeans-modules-maven-jaxws._5f_C_5f_vehicleServices>http://localhost:8080/cabServiceApp_services/vehicleServices?wsdl</org-netbeans-modules-maven-jaxws._5f_C_5f_vehicleServices>
     </properties>
 </project-shared-configuration>
